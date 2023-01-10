@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+    {% block body %}
+        <header>
+          <div class="view" style="background-image: url('https://www.polytecsousse.tn/wp-content/themes/edubin/assets/images/header.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <div class="mask rgba-gradient align-items-center">
+                <div class="row">
+                  <div style="margin-left: 50%;" class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+                    <h1 class="h1-responsive font-weight-bold mt-sm-5" style="color: #07294d">GoFormations </h1>
+                    <hr class="hr-light">
+                    <h5 class="mb-4" style="color:white;">Votre plateforme d'apprentissage 100% en ligne. Inscrivez-vous pour découvrir les différents cours proposés et bénéficier d'une expérience e-learning enrichissante ! Si vous êtes déjà enregistrés, connectez vous.</h5>
+                    <a href="{{ path('login') }}" style="color:rgb(100, 212, 231);" class="btn btn-white"><b>Se connecter</b></a>
+                    <a href="{{ path('app_register') }}" style="color:rgb(100, 212, 231);" class="btn btn-white"><b>S'inscrire</b></a>
+{#                    <a href="/suggestions/new2" style="color:rgb(100, 212, 231);" class="btn btn-outline-white"><b>Proposez des formations de vos choix</b></a>#}
+                  </div>
+                  <div class="col-md-6 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <style >
+            h5 {
+                background: #07294d;
+                opacity: .6;
+                border-radius:5px;
+                font-size: 1.17rem;
+                
+            }
+        </style>
+   {% endblock %}

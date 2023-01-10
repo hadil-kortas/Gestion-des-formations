@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.polytecsousse.tn/wp-content/plugins/edubin-core/assets/css/bootstrap.min.css?ver=8.9.22">
+
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+
+    {% block stylesheets %}
+        {#<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">}
+            {#{{ encore_entry_link_tags('app') }}#}
+
+    {% endblock %}
+
+    {% block javascripts %}
+        {# <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>}
+            {#{{ encore_entry_script_tags('app') }}#}
+    {% endblock %}
+</head>
+<body>
+<style>{% include 'style.css' %}</style>
+<style>{% include'bootstrap.min.css' %}</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ path('home') }}">Accueil</a>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('messages_new') }}">Contactez-nous</a>
+                </li>
+{#                <li class="nav-item">#}
+{#                    <a class="nav-link" href="{{ path('about')}}">En savoir plus</a>#}
+{#                </li>#}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_register') }}">S'inscrire</a>
+                </li>
+            </ul>
+                </div>
+        </div>
+</nav>
+<div class="container">
+    <div class="header-left">
+        <img width="180" height="90"   src="{{ asset('Images/cropped-logo-polytech.png') }}" class="custom-logo" alt="Ecole polytechnique de sousse" decoding="async">
+    </div>
+</div>
+{% block body %}
+{% endblock %}
+</body>
+
+</html>
